@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="IMC.Pages.PerfilPage"
+             Title="Perfil do Usuário">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label FontSize="Large" x:Name="NomeLabel" Margin="0,0,0,20"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Altura" />
+                <Label x:Name="AlturaLabel" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Peso" />
+                <Label x:Name="PesoLabel" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

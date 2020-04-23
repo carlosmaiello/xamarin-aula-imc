@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IMC.Modelos;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,6 +7,13 @@ namespace IMC
 {
     public partial class App : Application
     {
+        public static Usuario UsuarioLogado = new Usuario
+        {
+            Nome = "Carlos",
+            Email = "carlos.mjunior@sp.senac.br",
+            Senha = "123"
+        };
+
         public App()
         {
             InitializeComponent();

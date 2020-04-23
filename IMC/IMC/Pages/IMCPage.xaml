@@ -6,6 +6,9 @@
              mc:Ignorable="d"
              x:Class="IMC.Pages.IMCPage"
              Title="Cálculo de IMC">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Perfil" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
 
@@ -22,7 +25,7 @@
                 <Button Text="Calcular" Clicked="Button_Clicked" />
             </StackLayout>
             
-            <ListView x:Name="HistoricoList" />
+            <ListView x:Name="HistoricoList" ItemSelected="HistoricoList_ItemSelected"/>
             <Button Text="Limpar Lista" Margin="20" Clicked="Button_Clicked_1"/>
         </StackLayout>
     </ContentPage.Content>

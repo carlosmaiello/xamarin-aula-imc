@@ -18,9 +18,9 @@
                HorizontalOptions="Center" />
 
         <Label Text="E-mail" />
-        <Entry />
+        <Entry x:Name="EmailEntry" />
         <Label Text="Senha" />
-        <Entry />
+        <Entry  x:Name="SenhaEntry" />
         <Button Text="Entrar" Clicked="Button_Clicked" />
 
     </StackLayout>

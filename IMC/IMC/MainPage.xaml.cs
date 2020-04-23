@@ -20,9 +20,16 @@ namespace IMC
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            // Programar o evento de troca de tela
+            if (App.UsuarioLogado.Email == EmailEntry.Text &&
+                App.UsuarioLogado.Senha == SenhaEntry.Text)
+            {
+                App.Current.MainPage = new NavigationPage(new Pages.IMCPage());
+            }
+            else
+            {
+                DisplayAlert("Login", "Email ou senha inválidos", "Fechar");
+            }
 
-            App.Current.MainPage = new NavigationPage(new Pages.IMCPage());
         }
     }
 }
