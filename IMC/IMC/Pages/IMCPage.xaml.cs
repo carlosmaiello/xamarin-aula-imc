@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IMC.Modelos;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -23,14 +24,19 @@ namespace IMC.Pages
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            /*
             double peso = Convert.ToDouble(PesoEntry.Text);
             double altura = Convert.ToDouble(AlturaEntry.Text);
-
             double imc = peso / (altura * altura);
+            DisplayAlert("IMC", "Seu IMC é " + imc.Valor, "Fechar");
+            */
 
-            DisplayAlert("IMC", "Seu IMC é " + imc, "Fechar");
+            Imc imc = new Imc();
+            imc.Altura = Convert.ToDouble(AlturaEntry.Text);
+            imc.Peso = Convert.ToDouble(PesoEntry.Text);
 
-            Itens.Add("IMC: " + imc + " Peso: " + peso + " Altura: " + altura);
+            Itens.Add(imc.Mensagem);
+
             PesoEntry.Text = "";
             AlturaEntry.Text = "";
         }
